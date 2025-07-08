@@ -1,0 +1,29 @@
+description: Simple Simulation
+time_units: years
+generation_time: 29
+
+demes:
+- name: outgroup
+  description: Introgression free outgroup population
+  start_time: .inf
+  epochs:
+  - {end_time: 0, start_size: 2000}
+
+- name: ingroup
+  description: ingroup with archaic introgression
+  start_time: 50000
+  ancestors: [outgroup]
+  epochs:
+  - {end_time: 0, start_size: 2000}
+
+- name: archaic
+  description: archaics
+  start_time: 150000
+  ancestors: [outgroup]
+  epochs:
+  - {end_time: 0, start_size: 2000}
+
+
+
+
+
